@@ -1,4 +1,4 @@
-import { <%= pName %>Controller } from "./<%= hName %>.controller.ts";
+import { <%= pName %>Controller } from "./<%= hName %>.controller";
 
 let <%= name %>Directive = (): ng.IDirective => {
     return {<% if (restrict) { %>
