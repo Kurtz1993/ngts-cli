@@ -1,7 +1,7 @@
 import { Inject } from "<%= decoratorPath %>";
 
 @Inject()
-export class <%= pAppName %>Config {
+export class <%= name %>Config {
     constructor() { }
 
     /** Initializes the controller. */
