@@ -6,6 +6,7 @@
   "author": "Luis Rogelio Hernández López",
   "license": "MIT",
   "dependencies": {
-    "commander": "^2.9.0"
+    "commander": "^2.9.0",
+    "lodash": "^4.17.2"
   }
 }
