@@ -1,0 +1,11 @@
+{
+  "name": "ngts-cli",
+  "version": "0.0.1",
+  "description": "A CLI tool to scaffold common AngularJS 1.5.x files and folders using TypeScript.",
+  "main": "cli.js",
+  "author": "Luis Rogelio Hernández López",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.9.0"
+  }
+}
