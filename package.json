@@ -4,6 +4,14 @@
   "description": "A CLI tool to scaffold common AngularJS 1.5.x files and folders using TypeScript.",
   "bin": "./lib/ngts.js",
   "author": "Luis Rogelio Hernández López",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kurtz1993/ngts-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Kurtz1993/ngts-cli/issues"
+  },
+  "readme": "readme.md",
   "license": "MIT",
   "dependencies": {
     "commander": "^2.9.0",
