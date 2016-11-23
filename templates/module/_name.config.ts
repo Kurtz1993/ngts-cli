@@ -8,7 +8,7 @@ export class <%= pName %>Config {
                 url: "/<%= pName %>",
                 views: {
                     content: {
-                        templateUrl: "<%= tplPath %><%= hName %>.tpl.html",
+                        templateUrl: "<%= tplPath %><%= hName %>/<%= hName %>.tpl.html",
                         controller: "<%= pName %>Controller",
                         controllerAs: "<%= ctrlAlias %>"
                     }

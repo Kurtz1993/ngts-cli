@@ -5,7 +5,8 @@ let <%= name %>Directive = (): ng.IDirective => {
         restrict: "<%= restriction %>",<% } %>
         bindToController: true,
         controllerAs: "<%= ctrlAlias %>",
-        controller: <%= pName %>Controller
+        controller: <%= pName %>Controller,<% if (hasTemplate) { %>
+        templateUrl: "<%= tplPath %><%= hName %>/<%= hName %>.tpl.html",<% } %>
     };
 };
 
