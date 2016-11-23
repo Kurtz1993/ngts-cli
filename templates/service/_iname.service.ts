@@ -1,2 +1,2 @@
-declare interface I<%= name %>Service {
+declare interface I<%= pName %>Service {
 }
