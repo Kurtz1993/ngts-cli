@@ -1,4 +1,4 @@
-import { Inject } from "../common/decorators/decorators";
+import { Inject } from "<%= decoratorPath %>";
 
 @Inject("$stateProvider")
 export class <%= pName %>Config {
