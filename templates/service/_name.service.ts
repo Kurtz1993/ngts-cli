@@ -8,4 +8,4 @@ class <%= name %>Service extends BaseService implements I<%= name %>Service {
     }
 }
 
-export { <%= name %>Service }
+export { <%= name %>Service };
