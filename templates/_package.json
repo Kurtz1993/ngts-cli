@@ -3,9 +3,9 @@
   "name": "<%= appName %>",
   "private": true,
   "description": "",
-  "dependencies": {
+  "dependencies": {<% if (noBower) { %>
     "angular": "^1.5.8",
-    "angular-ui-router": "^0.3.2",
+    "angular-ui-router": "^0.3.2",<% } %>
     "gulp": "^3.9.1",
     "gulp-angular-templatecache": "^2.0.0",
     "gulp-concat": "^2.6.1",
