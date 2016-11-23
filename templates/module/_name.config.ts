@@ -10,7 +10,7 @@ export class <%= pName %>Config {
                     content: {
                         templateUrl: "<%= hName %>/<%= hName %>.tpl.html",
                         controller: "<%= pName %>Controller",
-                        controllerAs: "<%= alias %>"
+                        controllerAs: "<%= ctrlAlias %>"
                     }
                 }
             });

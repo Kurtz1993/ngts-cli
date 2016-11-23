@@ -3,7 +3,7 @@ import { <%= pName %>Controller } from "./<%= hName %>.controller.ts";
 let <%= name %>Directive = (): ng.IDirective => {
     return {
         bindToController: true,
-        controllerAs: "$ctrl",
+        controllerAs: "<%= ctrlAlias %>",
         controller: <%= pName %>Controller
     };
 };
