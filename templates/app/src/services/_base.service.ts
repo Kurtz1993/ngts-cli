@@ -26,9 +26,9 @@ abstract class BaseService {
      * Triggers a HTTP POST to the server with the specified endpoint and data.
      * @param endpoint The endpoint to POST to.
      * @param [data=null] Any data to be sent to the server.
-     * @returns A promise in the format of ApiResponse<any>.
+     * @returns A promise in the format of any.
      */
-    protected post(endpoint: string, data: any = null): ApiResponse<any> {
+    protected post(endpoint: string, data: any = null): any {
         return this.http.post(`${this.serviceUrl}/${endpoint}`, data, this._reqConfig)
             .then(res => res.data);
     }
@@ -38,9 +38,9 @@ abstract class BaseService {
      * @param endpoint The endpoint to GET from.
      * @param [queryParams] Any data to be sent to the server. Keys must match query parameter name.
      * @param [cache=false] Specifies if the request should be cached.
-     * @returns A promise in the format of ApiResponse<any>.
+     * @returns A promise in the format of any.
      */
-    protected get(endpoint: string, queryParams?: Object, cache: boolean = false): ApiResponse<any> {
+    protected get(endpoint: string, queryParams?: Object, cache: boolean = false): any {
         let getConfig = angular.copy(this._reqConfig);
         getConfig.params = queryParams;
         getConfig.cache = cache;
@@ -52,9 +52,9 @@ abstract class BaseService {
      * Triggers a HTTP DELETE to the server with the specified endpoint and query parameters.
      * @param endpoint The endpoint to DELETE from.
      * @param [queryParams] Any data to be sent to the server. Keys must match query parameter name.
-     * @returns A promise in the format of ApiResponse<any>.
+     * @returns A promise in the format of any.
      */
-    protected delete(endpoint: string, queryParams?: Object): ApiResponse<any> {
+    protected delete(endpoint: string, queryParams?: Object): any {
         let deleteConfig = angular.copy(this._reqConfig);
         deleteConfig.params = queryParams;
         return this.http.delete(`${this.serviceUrl}/${endpoint}`, deleteConfig)
@@ -65,9 +65,9 @@ abstract class BaseService {
      * Triggers a HTTP PUT to the server with the specified endpoint and query parameters.
      * @param endpoint The endpoint to PUT at.
      * @param [data=null] Any data to be sent to the server.
-     * @returns A promise in the format of ApiResponse<any>.
+     * @returns A promise in the format of any.
      */
-    protected put(endpoint: string, data: any = null): ApiResponse<any> {
+    protected put(endpoint: string, data: any = null): any {
         return this.http.put(`${this.serviceUrl}/${endpoint}`, data, this._reqConfig)
             .then(res => res.data);
     }
