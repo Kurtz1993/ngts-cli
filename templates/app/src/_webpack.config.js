@@ -1,23 +1,23 @@
-var path = require('path');
+var path = require("path");
 
 module.exports = {
-    context: path.join(process.cwd(), '<%= srcFolder %>'),
+    context: path.join(process.cwd(), "<%= srcFolder %>"),
     progress: true,
     entry: {
-        '<%= appName %>': './<%= hAppName %>.ts'
+        "<%= appName %>": "./<%= hAppName %>.ts"
     },
-    devtool: 'source-map',
+    devtool: "source-map",
     output: {
-        filename: '[name].js'
+        filename: "[name].js"
     },
     resolve: {
-        extensions: ['', '.webpack.js', '.web.js', '.ts', '.js']
+        extensions: ["", ".webpack.js", ".web.js", ".ts", ".js"]
     },
     module: {
         loaders: [
             {
                 test: /\.ts?$/,
-                loader: 'ts-loader'
+                loader: "ts-loader"
             }
         ]
     }
