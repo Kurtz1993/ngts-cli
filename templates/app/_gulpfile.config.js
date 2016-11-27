@@ -9,7 +9,7 @@ module.exports = function () {
         },
         templates: src + "**/*.tpl.html",
         scss: {
-            entry: src + "styles/<%= appName %>.scss",
+            entry: src + "styles/<%= hAppName %>.scss",
             src: [src + "**/*.scss"],
             destPath: outputPath + "css"
         },
