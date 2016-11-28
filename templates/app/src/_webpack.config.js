@@ -4,7 +4,7 @@ module.exports = {
     context: path.join(process.cwd(), "<%= srcFolder %>"),
     progress: true,
     entry: {
-        "<%= appName %>": "./<%= hAppName %>.ts"
+        "<%= hAppName %>": "./<%= hAppName %>.ts"
     },
     devtool: "source-map",
     output: {
