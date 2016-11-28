@@ -16,7 +16,7 @@ function buildTypescript(watch) {
     return function() {
         webpackConf.watch = watch;
         return gulp
-            .src("./<%= srcFolder %>/<%= appName %>.ts")
+            .src("./<%= srcFolder %>/<%= hAppName %>.ts")
             .pipe(webpack(webpackConf))
             .pipe(gulp.dest(config.ts.dest));
     }
@@ -38,7 +38,7 @@ gulp.task("sass", function() {
 
 gulp.task("bundle-tpls", function() {
     return gulp.src(config.html.src)
-        .pipe(templateCache({ module: "<%= appName %>.tpls", standalone: true, filename: "<%= appName %>.tpls.js" }))
+        .pipe(templateCache({ module: "<%= hAppName %>.tpls", standalone: true, filename: "<%= hAppName %>.tpls.js" }))
         .pipe(gulp.dest(config.html.dest));
 });
 
