@@ -5,7 +5,7 @@ export class <%= pAppName %>Config {
     constructor(stateProvider: ng.ui.IStateProvider, urlRouterProvider: ng.ui.IUrlRouterProvider) {
         stateProvider
             .state("<%= appName %>", {
-                url: "/",
+                abstract: true,
                 templateUrl: "<%= hAppName %>.tpl.html"
             });
 
