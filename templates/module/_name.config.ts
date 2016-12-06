@@ -7,7 +7,7 @@ export class <%= pName %>Config {
             .state("<%= appName %>.<%= name %>", {
                 url: "/<%= pName %>",
                 views: {
-                    content: {
+                    <%= viewName %>: {
                         templateUrl: "<%= tplPath %><%= hName %>/<%= hName %>.tpl.html",
                         controller: "<%= pName %>Controller",
                         controllerAs: "<%= ctrlAlias %>"
