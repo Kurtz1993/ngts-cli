@@ -5,7 +5,10 @@ module.exports = function () {
     var config = {
         vendor: {
             destPath: outputPath + "js",
-            src: []
+            src: [
+                "node_modules/angular/angular.js",
+                "node_modules/angular-ui-router/release/angular-ui-router.js"
+            ]
         },
         templates: src + "**/*.tpl.html",
         scss: {
