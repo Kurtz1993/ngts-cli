@@ -293,11 +293,8 @@ services.ts
 ```typescript
 import { ExampleService } from "./example.service";
 
-let module = angular
+export const services = angular
     .module("app.services", [])
-    .service("exampleService", ExampleService);
-
-let services = module.name;
-
-export { services };
+    .service("exampleService", ExampleService)
+    .name;
 ```
