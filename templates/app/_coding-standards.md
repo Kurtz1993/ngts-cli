@@ -125,16 +125,13 @@ import { ExampleModuleConfig } from "./example-module.config";
 import { ExampleModuleController } from "./example-module.controller";
 import { anotherModule } from "../another-module/another-module";
 
-let module = angular
+export const exampleModule = angular
     .module("app.exampleModule", [
         anotherModule
     ])
     .controller("ExampleModuleController", ExampleModuleController)
-    .config(ExampleModuleConfig);
-
-let exampleModule = module.name
-
-export { exampleModule };
+    .config(ExampleModuleConfig)
+    .name;
 ```
 
 ### Module Controller File
