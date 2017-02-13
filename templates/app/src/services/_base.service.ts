@@ -1,3 +1,5 @@
+import * as angular from "angular";
+
 /** Base class for all services. */
 abstract class BaseService {
     protected serviceUrl: string;
