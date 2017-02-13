@@ -76,7 +76,7 @@ These conventions specify how angular modules should be structured in the applic
 
 ### Modules Name Conventions
 
-- All modules should be written in its own folder, which should have the same name as the module written in `hyphen-separated-form`.
+- All modules should be written in its own folder, which should have the same name as the module written in `kebab-case`.
 
 ```
 src/
