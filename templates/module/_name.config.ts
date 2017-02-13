@@ -1,5 +1,4 @@
 import { Inject } from "<%= decoratorPath %>";
-import { <%= pName %>Controller } from "./<%= hName %>.controller";
 
 @Inject("$stateProvider")
 export class <%= pName %>Config {
@@ -10,7 +9,7 @@ export class <%= pName %>Config {
                 views: {
                     <%= viewName %>: {
                         templateUrl: "<%= tplPath %><%= hName %>/<%= hName %>.tpl.html",
-                        controller: <%= pName %>Controller,
+                        controller: "<%= pName %>Controller",
                         controllerAs: "<%= ctrlAlias %>"
                     }
                 }
