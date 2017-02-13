@@ -10,12 +10,12 @@ abstract class BaseService {
     /**
      * Use the base service class to create your services.
      * @param http Angular HTTP service.
-     * @param env Variable set on startup that has the API endpoint.
+     * @param apiUrl API endpoint.
      * @param prefix Prefix to use with the service. For example: "auth";
      */
-    constructor(protected http: ng.IHttpService, env: any, prefix: string) {
+    constructor(protected http: ng.IHttpService, apiUrl: string, prefix: string) {
         this._storage = window.sessionStorage;
-        this.serviceUrl = `${env.api}/${prefix}`;
+        this.serviceUrl = `${apiUrl}/${prefix}`;
         let token = this._storage.getItem("token");
         this.headers["Authorization"] = `Bearer ${token}`;
         this._reqConfig = {
