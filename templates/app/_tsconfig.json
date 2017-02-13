@@ -11,7 +11,10 @@
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": true
+    "noUnusedParameters": true,
+    "typeRoot": [
+      "./node_modules/@types/"
+    ]
   },
   "compileOnSave": false
 }
