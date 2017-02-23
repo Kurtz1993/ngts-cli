@@ -4,6 +4,6 @@ import { <%= pName %>Controller } from "./<%= hName %>.controller";
 
 <% } %>export const <%= name %> = angular
     .module("<%= appName %>.<%= name %>", ["ui.router"])<% if (!moduleOnly) { %>
-    .controller("<%= pName %>", <%= pName %>Controller)
+    .controller("<%= pName %>Controller", <%= pName %>Controller)
     .config(<%= pName %>Config)<% } %>
     .name;
