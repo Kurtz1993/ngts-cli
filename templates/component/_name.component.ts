@@ -1,6 +1,6 @@
 import { <%= pName %>Controller } from "./<%= hName %>.controller";
 
-let <%= name %>: ng.IComponentOptions = {
+export const <%= name %>: ng.IComponentOptions = {
     controller: <%= pName %>Controller,
     controllerAs: "<%= ctrlAlias %>",
     templateUrl: "<%= tplPath %><%= hName %>/<%= hName %>.tpl.html",
@@ -8,5 +8,3 @@ let <%= name %>: ng.IComponentOptions = {
 
     }
 };
-
-export { <%= name %> };
