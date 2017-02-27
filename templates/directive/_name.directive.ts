@@ -1,6 +1,6 @@
 import { <%= pName %>Controller } from "./<%= hName %>.controller";
 
-let <%= name %>Directive = (): ng.IDirective => {
+export const <%= name %>Directive = (): ng.IDirective => {
     return {<% if (restrict) { %>
         restrict: "<%= restriction %>",<% } %>
         bindToController: true,
@@ -9,5 +9,3 @@ let <%= name %>Directive = (): ng.IDirective => {
         templateUrl: "<%= tplPath %><%= hName %>/<%= hName %>.tpl.html",<% } %>
     };
 };
-
-export { <%= name %>Directive };
