@@ -1,14 +1,14 @@
-import { Inject } from "./decorators/decorators";
+import { Inject } from './decorators/decorators';
 
-@Inject("$stateProvider", "$urlRouterProvider")
+@Inject('$stateProvider', '$urlRouterProvider')
 export class <%= pAppName %>Config {
     constructor(stateProvider: ng.ui.IStateProvider, urlRouterProvider: ng.ui.IUrlRouterProvider) {
         stateProvider
-            .state("<%= appName %>", {
-                url: "/",
-                template: "<h2>Hello world!</h2>"
+            .state('<%= appName %>', {
+                url: '/',
+                template: '<h2>Hello world!</h2>'
             });
 
-        urlRouterProvider.otherwise("/");
+        urlRouterProvider.otherwise('/');
     }
 }

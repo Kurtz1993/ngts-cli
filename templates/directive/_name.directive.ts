@@ -1,11 +1,11 @@
-import { <%= pName %>Controller } from "./<%= hName %>.controller";
+import { <%= pName %>Controller } from './<%= hName %>.controller';
 
 export const <%= name %>Directive = (): ng.IDirective => {
     return {<% if (restrict) { %>
-        restrict: "<%= restriction %>",<% } %>
+        restrict: '<%= restriction %>',<% } %>
         bindToController: true,
-        controllerAs: "<%= ctrlAlias %>",
+        controllerAs: '<%= ctrlAlias %>',
         controller: <%= pName %>Controller,<% if (hasTemplate) { %>
-        templateUrl: "<%= tplPath %><%= hName %>/<%= hName %>.tpl.html",<% } %>
+        templateUrl: '<%= tplPath %><%= hName %>/<%= hName %>.tpl.html',<% } %>
     };
 };

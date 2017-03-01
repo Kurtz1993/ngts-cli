@@ -11,10 +11,10 @@ More information about the TypeScript language can be found here: [TypeScript Ha
 - All local variable, public and static property and method names should be written in `camelCase` and self-descriptive.
 
 ```typescript
-import { Inject } from "../decorators/decorators";
+import { Inject } from '../decorators/decorators';
 let userName: string;
 
-@Inject("$scope")
+@Inject('$scope')
 class Hello {
     public greeting: string;
 
@@ -121,15 +121,15 @@ More information about destructuring can be found here: [MDN](https://developer.
 Below you can find an example of a simple module definition.
 
 ```typescript
-import { ExampleModuleConfig } from "./example-module.config";
-import { ExampleModuleController } from "./example-module.controller";
-import { anotherModule } from "../another-module/another-module";
+import { ExampleModuleConfig } from './example-module.config';
+import { ExampleModuleController } from './example-module.controller';
+import { anotherModule } from '../another-module/another-module';
 
 export const exampleModule = angular
-    .module("app.exampleModule", [
+    .module('app.exampleModule', [
         anotherModule
     ])
-    .controller("ExampleModuleController", ExampleModuleController)
+    .controller('ExampleModuleController', ExampleModuleController)
     .config(ExampleModuleConfig)
     .name;
 ```
@@ -161,9 +161,9 @@ This file is where we define the controller that our module will use.
 An example of a controller can be found below.
 
 ```typescript
-import { Inject } from "../decorators/decorators";
+import { Inject } from '../decorators/decorators';
 
-@Inject("$scope")
+@Inject('$scope')
 export class ExampleModuleController {
     public saveButtonText: string;
     private _status: number;
@@ -175,7 +175,7 @@ export class ExampleModuleController {
      */
     public saveChanges(): void {
         this._sendInformation();
-        this.saveButtonText = "Saving...";
+        this.saveButtonText = 'Saving...';
     }
 
     /**
@@ -198,26 +198,26 @@ This file includes all the module configuration passed to the `.config()` method
 - Configuration file must handle dependency injection with the $inject Property Annotation. This requires a static $inject property inside the class.
     - More information can be found here: [AngularJS Docs](https://code.angularjs.org/1.5.8/docs/guide/di#-inject-property-annotation).
 - Configuration file defines how controller works, so:
-    - Configuration file must define the `controllerAs` property and assign the string `"vm"` to it in order to use the controller properties instead of `$scope`.
+    - Configuration file must define the `controllerAs` property and assign the string `'vm'` to it in order to use the controller properties instead of `$scope`.
 - Configuration file url must be defined in `camelCase`.
 - Configuration file state must be defined as `app.` following the module name in `camelCase`.
 
 An example configuration file can be found below.
 
 ```typescript
-import { Inject } from "../decorators/decorators";
+import { Inject } from '../decorators/decorators';
 
-@Inject("$stateProvider")
+@Inject('$stateProvider')
 export class ExampleModuleConfig {
     constructor(stateProvider: ng.ui.IStateProvider) {
         stateProvider
-            .state("app.exampleModule", {
-                url: "/exampleModule",
+            .state('app.exampleModule', {
+                url: '/exampleModule',
                 views: {
-                    "ui-view-name": {
-                        templateUrl: "<src-path>/example-module/example-module.tpl.html",
-                        controller: "ExampleModuleController",
-                        controllerAs: "vm"
+                    'ui-view-name': {
+                        templateUrl: '<src-path>/example-module/example-module.tpl.html',
+                        controller: 'ExampleModuleController',
+                        controllerAs: 'vm'
                     }
                 }
             });
@@ -232,8 +232,8 @@ export class ExampleModuleConfig {
 An example of a template with specific styling can be found below:
 
 ```html
-<div class="app-example-module">
-    <h1 class="title">Hello module!</h1>
+<div class='app-example-module'>
+    <h1 class='title'>Hello module!</h1>
 </div>
 ```
 
@@ -275,13 +275,13 @@ An example service can be found below.
 example-service.ts
 
 ```typescript
-import { Inject } from "../decorators/decorators";
-import { BaseService } from "./base.service";
+import { Inject } from '../decorators/decorators';
+import { BaseService } from './base.service';
 
-@Inject("$http", "env")
+@Inject('$http', 'env')
 class ExampleService extends BaseService implements IExampleService {
     constructor(http: ng.IHttpService, env: any) {
-        super(http, env, "example");
+        super(http, env, 'example');
     }
 }
 
@@ -291,10 +291,10 @@ export { ExampleService }
 services.ts
 
 ```typescript
-import { ExampleService } from "./example.service";
+import { ExampleService } from './example.service';
 
 export const services = angular
-    .module("app.services", [])
-    .service("exampleService", ExampleService)
+    .module('app.services', [])
+    .service('exampleService', ExampleService)
     .name;
 ```

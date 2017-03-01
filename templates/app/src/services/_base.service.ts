@@ -1,4 +1,4 @@
-import * as angular from "angular";
+import * as angular from 'angular';
 
 /** Base class for all services. */
 abstract class BaseService {
@@ -11,13 +11,13 @@ abstract class BaseService {
      * Use the base service class to create your services.
      * @param http Angular HTTP service.
      * @param apiUrl API endpoint.
-     * @param prefix Prefix to use with the service. For example: "auth";
+     * @param prefix Prefix to use with the service. For example: 'auth';
      */
     constructor(protected http: ng.IHttpService, apiUrl: string, prefix: string) {
         this._storage = window.sessionStorage;
         this.serviceUrl = `${apiUrl}/${prefix}`;
-        let token = this._storage.getItem("token");
-        this.headers["Authorization"] = `Bearer ${token}`;
+        let token = this._storage.getItem('token');
+        this.headers['Authorization'] = `Bearer ${token}`;
         this._reqConfig = {
             headers: this.headers,
             timeout: 45000

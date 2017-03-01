@@ -1,4 +1,4 @@
-import { Inject } from "<%= decoratorPath %>";
+import { Inject } from '<%= decoratorPath %>';
 
 @Inject()
 export class <%= pName %>Controller {

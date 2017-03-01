@@ -1,30 +1,30 @@
-var webpack = require("webpack");
+var webpack = require('webpack');
 
 module.exports = {
     entry: {
-        "<%= hAppName %>": "./<%= srcFolder %>/<%= hAppName %>.ts",
-        "vendor": "./<%= srcFolder %>/vendor.ts"
+        '<%= hAppName %>': './<%= srcFolder %>/<%= hAppName %>.ts',
+        'vendor': './<%= srcFolder %>/vendor.ts'
     },
-    devtool: "source-map",
+    devtool: 'source-map',
     output: {
-        path: "./<%= outFolder %>/js",
-        filename: "[name].js",
-        devtoolModuleFilenameTemplate: "../../[resource-path]"
+        path: './<%= outFolder %>/js',
+        filename: '[name].js',
+        devtoolModuleFilenameTemplate: '../../[resource-path]'
     },
     resolve: {
-        extensions: [".ts", ".js"]
+        extensions: ['.ts', '.js']
     },
     module: {
         loaders: [
             {
                 test: /\.ts?$/,
-                loader: "awesome-typescript-loader"
+                loader: 'awesome-typescript-loader'
             }
         ]
     },
     plugins: [
         new webpack.optimize.CommonsChunkPlugin({
-            name: ["<%= hAppName %>", "vendor"]
+            name: ['<%= hAppName %>', 'vendor']
         })
     ]
 }
