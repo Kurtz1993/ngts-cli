@@ -1,6 +1,6 @@
 import { <%= pName %>Controller } from './<%= hName %>.controller';
 
-export const <%= name %>Directive = (): ng.IDirective => {
+export const <%= pName %>Directive = (): ng.IDirective => {
     return {<% if (restrict) { %>
         restrict: '<%= restriction %>',<% } %>
         bindToController: true,
