@@ -1,6 +1,6 @@
 {
   "name": "ngts",
-  "version": "2.5.2",
+  "version": "2.5.3",
   "description": "A CLI tool to scaffold common AngularJS 1.5.x files and folders using TypeScript.",
   "bin": "./lib/ngts.js",
   "author": "Luis Rogelio Hernández López",
