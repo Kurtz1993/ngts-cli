@@ -5,5 +5,5 @@ export class <%= pName %>Controller {
     constructor() { }
 
     /** Initializes the controller. */
-    public $onInit(): void { }
+    $onInit(): void {}
 }
