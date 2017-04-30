@@ -6,4 +6,7 @@ export class <%= pName %>Controller {
 
     /** Initializes the controller. */
     $onInit(): void {}
+
+    /** Cleans up the controller. */
+    $onDestroy(): void {}
 }
